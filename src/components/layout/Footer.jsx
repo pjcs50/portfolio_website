@@ -3,10 +3,10 @@ import { Github, Linkedin, Mail, Twitter, Heart } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const socialLinks = [
-  { name: 'GitHub', icon: Github, href: 'https://github.com/yourusername' },
-  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/in/yourusername' },
-  { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/yourusername' },
-  { name: 'Email', icon: Mail, href: 'mailto:your.email@example.com' },
+  { name: 'GitHub', icon: Github, href: 'https://github.com/pjcs50' },
+  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/in/prakhar-jain-3654702b9/' },
+  { name: 'Kaggle', icon: Github, href: 'https://kaggle.com/prakharjain50/code' },
+  { name: 'Email', icon: Mail, href: 'mailto:prakhar.jain377@gmail.com' },
 ]
 
 const footerLinks = [
@@ -24,10 +24,10 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold font-serif gradient-text">
-              Your Name
+              Prakhar Jain
             </h3>
             <p className="text-sm text-muted-foreground max-w-xs">
-              Aspiring [Your Field] passionate about innovation, learning, and making a positive impact.
+              Building products that work for real users. Exploring physics, data science, and how people think.
             </p>
           </div>
 
@@ -74,7 +74,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-border">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
             <p className="text-sm text-muted-foreground text-center sm:text-left">
-              © {new Date().getFullYear()} Your Name. All rights reserved.
+              © {new Date().getFullYear()} Prakhar Jain. All rights reserved.
             </p>
             <p className="text-sm text-muted-foreground flex items-center">
               Made with <Heart className="w-4 h-4 mx-1 text-red-500 fill-red-500" /> and React

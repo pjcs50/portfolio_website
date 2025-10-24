@@ -49,7 +49,7 @@ export default function Header() {
               whileTap={{ scale: 0.95 }}
               className="text-2xl font-bold font-serif gradient-text"
             >
-              Your Name
+              Prakhar Jain
             </motion.div>
           </Link>
 
