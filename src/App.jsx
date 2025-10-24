@@ -6,6 +6,8 @@ import Projects from './pages/Projects'
 import Awards from './pages/Awards'
 import Skills from './pages/Skills'
 import Contact from './pages/Contact'
+import Vipassana from './pages/Vipassana'
+import Squash from './pages/Squash'
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/vipassana" element={<Vipassana />} />
+          <Route path="/squash" element={<Squash />} />
           <Route path="/awards" element={<Awards />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />

@@ -6,6 +6,8 @@ import { cn } from '../../lib/utils'
 const navigation = [
   { name: 'About', href: '/about' },
   { name: 'Projects', href: '/projects' },
+  { name: 'Vipassana', href: '/vipassana' },
+  { name: 'Squash', href: '/squash' },
   { name: 'Awards', href: '/awards' },
   { name: 'Skills', href: '/skills' },
   { name: 'Contact', href: '/contact' },
