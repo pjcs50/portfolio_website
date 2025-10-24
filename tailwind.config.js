@@ -49,8 +49,8 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['Playfair Display', 'Georgia', 'serif'],
-        mono: ['IBM Plex Mono', 'monospace'],
+        serif: ['Newsreader', 'Georgia', 'serif'],
+        mono: ['JetBrains Mono', 'Consolas', 'monospace'],
       },
       animation: {
         "fade-in": "fade-in 0.5s ease-in-out",

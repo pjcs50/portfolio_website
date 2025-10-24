@@ -1,204 +1,156 @@
-import { motion } from 'framer-motion'
-import { ArrowDown, Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { Button } from '../components/ui/Button'
-
-const fadeInUp = {
-  initial: { opacity: 0, y: 60 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 }
-}
-
-const staggerContainer = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-}
+import { ArrowRight, Mail, MapPin } from 'lucide-react'
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated Background Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-blue-950 dark:via-purple-950 dark:to-pink-950">
-          <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
-        </div>
+      <section className="section-spacing">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="space-y-12">
+            {/* Name and Title */}
+            <div className="space-y-6">
+              <h1 className="text-display font-serif">
+                Prakhar Jain
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl">
+                I build products that survive real users: workers on sites, hotel ops teams, students studying at 2 a.m. I love physics, data/information science, and how people think — psychology, neuroscience, behavioral economics.
+              </p>
+            </div>
 
-        {/* Floating Orbs */}
-        <motion.div
-          className="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 dark:opacity-30"
-          animate={{
-            y: [0, -20, 0],
-            x: [0, 10, 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div
-          className="absolute top-40 right-10 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 dark:opacity-30"
-          animate={{
-            y: [0, 20, 0],
-            x: [0, -10, 0],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div
-          className="absolute -bottom-8 left-1/3 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 dark:opacity-30"
-          animate={{
-            y: [0, -30, 0],
-            x: [0, 20, 0],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-
-        {/* Content */}
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            variants={staggerContainer}
-            initial="initial"
-            animate="animate"
-          >
-            {/* Badge */}
-            <motion.div variants={fadeInUp} className="inline-flex items-center mb-6">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/80 backdrop-blur-sm border border-border shadow-soft">
-                <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium">Welcome to my portfolio</span>
+            {/* Meta Info */}
+            <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4" />
+                <a href="mailto:prakhar.jain377@gmail.com" className="link-underline">
+                  prakhar.jain377@gmail.com
+                </a>
               </div>
-            </motion.div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                <span>Jaipur, India</span>
+              </div>
+              <a
+                href="https://linkedin.com/in/prakhar-jain-3654702b9/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-underline"
+              >
+                LinkedIn
+              </a>
+            </div>
 
-            {/* Main Heading */}
-            <motion.h1
-              variants={fadeInUp}
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-serif mb-6 tracking-tight"
-            >
-              Crafting{' '}
-              <span className="gradient-text">
-                Tomorrow's
-              </span>
-              <br />
-              Solutions Today
-            </motion.h1>
-
-            {/* Subtitle */}
-            <motion.p
-              variants={fadeInUp}
-              className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed"
-            >
-              "The only way to do great work is to love what you do." — Steve Jobs
-              <br />
-              <span className="text-base mt-4 block">
-                Hi, I'm <strong className="text-foreground font-semibold">Your Name</strong>, a passionate student exploring the intersection of technology, creativity, and innovation.
-              </span>
-            </motion.p>
-
-            {/* CTA Buttons */}
-            <motion.div
-              variants={fadeInUp}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            >
-              <Button size="lg" asChild>
-                <Link to="/about" className="group">
-                  Start the Journey
-                  <motion.span
-                    className="ml-2 inline-block"
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                    →
-                  </motion.span>
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link to="/projects">
-                  View My Work
-                </Link>
-              </Button>
-            </motion.div>
-          </motion.div>
-
-          {/* Scroll Indicator */}
-          <motion.div
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.8 }}
-          >
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="flex flex-col items-center text-muted-foreground"
-            >
-              <span className="text-sm mb-2">Scroll to explore</span>
-              <ArrowDown className="w-5 h-5" />
-            </motion.div>
-          </motion.div>
+            {/* Education */}
+            <div className="pt-8 border-t border-border">
+              <h2 className="text-sm font-medium mb-4">Education</h2>
+              <div className="space-y-2">
+                <h3 className="text-lg font-serif">Jayshree Periwal International School</h3>
+                <p className="text-muted-foreground">
+                  IB Diploma, May 2026
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Physics HL, Computer Science HL, Mathematics AA HL, Economics HL, English A SL, Hindi B SL
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Featured Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif mb-4">
-            Why This Matters
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Every project tells a story. Every challenge solved is a step forward.
-            Here's a glimpse into my journey.
-          </p>
-        </motion.div>
+      {/* Featured Work */}
+      <section className="py-24 bg-muted/30">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <h2 className="text-heading font-serif mb-16">Selected Work</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            {
-              title: "Innovation",
-              description: "Pushing boundaries and exploring new frontiers in technology and creativity.",
-              icon: "💡"
-            },
-            {
-              title: "Impact",
-              description: "Creating solutions that make a meaningful difference in people's lives.",
-              icon: "🌟"
-            },
-            {
-              title: "Growth",
-              description: "Continuously learning, adapting, and evolving through challenges.",
-              icon: "🚀"
-            }
-          ].map((item, index) => (
-            <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
-              className="p-8 rounded-2xl bg-card border border-border shadow-soft hover:shadow-lg transition-all"
+          <div className="space-y-16">
+            {/* TopperTrack */}
+            <div className="space-y-4">
+              <h3 className="text-2xl font-serif">TopperTrack</h3>
+              <p className="text-muted-foreground">AI tutor for SAT/JEE</p>
+              <p className="leading-relaxed">
+                A study buddy that plans your day, generates notes and flashcards from textbooks, and tracks progress. Led a 4-student team to build the plan engine, focus loop, and cohort dashboards. Ran a pilot with Allen (Jaipur) reaching 1,700+ students.
+              </p>
+              <Link
+                to="/projects"
+                className="inline-flex items-center gap-2 text-sm font-medium group"
+              >
+                Read more
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+
+            {/* HeatScape */}
+            <div className="space-y-4">
+              <h3 className="text-2xl font-serif">HeatScape</h3>
+              <p className="text-muted-foreground">Cooling helmet for workers</p>
+              <p className="leading-relaxed">
+                Passive-cooling helmet with sub-₹500 BOM. 4-week, 3-site pilot cut heatstroke reports by ~40%. Secured BRPLK pilot for 3,000 units valued at $10k.
+              </p>
+              <Link
+                to="/projects"
+                className="inline-flex items-center gap-2 text-sm font-medium group"
+              >
+                Read more
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+
+            {/* Annapurna */}
+            <div className="space-y-4">
+              <h3 className="text-2xl font-serif">Annapurna</h3>
+              <p className="text-muted-foreground">Hotel surplus to meals</p>
+              <p className="leading-relaxed">
+                Connected Marriott GM and four nearby hotels with Akshaya Patra to rescue untouched banquet trays. 20k+ meals delivered since launch.
+              </p>
+              <Link
+                to="/projects"
+                className="inline-flex items-center gap-2 text-sm font-medium group"
+              >
+                Read more
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Links */}
+      <section className="section-spacing">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+            <div>
+              <h3 className="text-sm font-medium mb-4">Experience</h3>
+              <ul className="space-y-3 text-muted-foreground">
+                <li>Marriott International — Energy & Operations Intern</li>
+                <li>FLEECA Automotive — R&D Intern (TPMS)</li>
+                <li>ChipSor — Embedded & Product Intern</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-sm font-medium mb-4">Recognition</h3>
+              <ul className="space-y-3 text-muted-foreground">
+                <li>SASMO #1 India, #2 Global</li>
+                <li>NASA Beamline Top-25/500</li>
+                <li>Squash: 3× ISSO Golds, SGFI Top-5</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-16 flex flex-wrap gap-4">
+            <Link
+              to="/about"
+              className="px-6 py-3 border border-border rounded hover:bg-accent transition-colors text-sm font-medium"
             >
-              <div className="text-5xl mb-4">{item.icon}</div>
-              <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{item.description}</p>
-            </motion.div>
-          ))}
+              More about me
+            </Link>
+            <Link
+              to="/projects"
+              className="px-6 py-3 bg-foreground text-background rounded hover:opacity-90 transition-opacity text-sm font-medium"
+            >
+              View all projects
+            </Link>
+          </div>
         </div>
       </section>
     </div>

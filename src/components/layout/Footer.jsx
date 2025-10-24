@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Github, Linkedin, Mail, Twitter, Heart } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { Github, Linkedin, Mail } from 'lucide-react'
 
 const socialLinks = [
   { name: 'GitHub', icon: Github, href: 'https://github.com/pjcs50' },
@@ -12,34 +11,35 @@ const socialLinks = [
 const footerLinks = [
   { name: 'About', href: '/about' },
   { name: 'Projects', href: '/projects' },
-  { name: 'Blog', href: '/blog' },
+  { name: 'Awards', href: '/awards' },
+  { name: 'Skills', href: '/skills' },
   { name: 'Contact', href: '/contact' },
 ]
 
 export default function Footer() {
   return (
-    <footer className="bg-muted/30 border-t border-border mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+    <footer className="border-t border-border mt-32">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold font-serif gradient-text">
+            <h3 className="text-base font-serif font-medium">
               Prakhar Jain
             </h3>
-            <p className="text-sm text-muted-foreground max-w-xs">
+            <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
               Building products that work for real users. Exploring physics, data science, and how people think.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+            <h4 className="text-sm font-medium mb-4">Navigation</h4>
+            <ul className="space-y-3">
               {footerLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -50,21 +50,19 @@ export default function Footer() {
 
           {/* Social Links */}
           <div>
-            <h4 className="text-sm font-semibold mb-4">Connect</h4>
-            <div className="flex space-x-4">
+            <h4 className="text-sm font-medium mb-4">Connect</h4>
+            <div className="flex gap-4">
               {socialLinks.map((social) => (
-                <motion.a
+                <a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="p-2 rounded-lg bg-background hover:bg-primary/10 hover:text-primary transition-colors"
+                  className="p-2 rounded hover:bg-accent transition-colors"
                   aria-label={social.name}
                 >
                   <social.icon className="w-5 h-5" />
-                </motion.a>
+                </a>
               ))}
             </div>
           </div>
@@ -72,14 +70,9 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border">
-          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-            <p className="text-sm text-muted-foreground text-center sm:text-left">
-              © {new Date().getFullYear()} Prakhar Jain. All rights reserved.
-            </p>
-            <p className="text-sm text-muted-foreground flex items-center">
-              Made with <Heart className="w-4 h-4 mx-1 text-red-500 fill-red-500" /> and React
-            </p>
-          </div>
+          <p className="text-sm text-muted-foreground text-center">
+            © {new Date().getFullYear()} Prakhar Jain
+          </p>
         </div>
       </div>
     </footer>

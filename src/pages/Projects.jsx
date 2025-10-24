@@ -1,209 +1,137 @@
-import { motion } from 'framer-motion'
-import { ExternalLink, Github, Calendar, Tag } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/Card'
-import { Button } from '../components/ui/Button'
-import { Badge } from '../components/ui/Badge'
 import ImageGallery from '../components/ImageGallery'
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 60 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.6 }
-}
-
-// Placeholder project data - Replace with your actual projects
 const projects = [
   {
-    id: 1,
-    title: "AI-Powered Study Assistant",
-    description: "Developed a machine learning application that helps students organize their study materials and provides personalized learning recommendations.",
-    role: "Lead Developer & Designer",
-    timeline: "June 2024 - August 2024",
-    challenges: "Implementing NLP algorithms, creating an intuitive UI, managing large datasets",
-    achievements: "Used by 500+ students, 4.8/5 rating on the app store, featured in school newsletter",
-    technologies: ["Python", "TensorFlow", "React", "Firebase"],
+    id: 'toppertrack',
+    title: 'TopperTrack',
+    subtitle: 'AI tutor for SAT/JEE',
+    backstory: 'Late-night study, no mentors, scattered resources. I interviewed 32 students, mapped pain points, and trained tools on ~20 years of past papers, topper notes, and books.',
+    role: 'Led a 4-student team; built the plan engine, focus loop (Pomodoro, XP, leaderboard), source-linked notes, cohort dashboards; ran a pilot with Allen (Jaipur).',
+    outcomes: '1,700+ students used pilot cohorts. Documented feature set and results.',
     images: [
-      "https://images.unsplash.com/photo-1555421689-d68471e189f2?w=800&h=450&fit=crop",
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=450&fit=crop",
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=450&fit=crop"
-    ],
-    links: {
-      github: "https://github.com/yourusername/project",
-      demo: "https://demo.example.com"
-    }
+      'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&h=675&fit=crop',
+      'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=1200&h=675&fit=crop',
+      'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1200&h=675&fit=crop'
+    ]
   },
   {
-    id: 2,
-    title: "Community Impact Tracker",
-    description: "Built a web platform to help local non-profits track volunteer hours, donations, and community engagement metrics.",
-    role: "Full-Stack Developer",
-    timeline: "January 2024 - April 2024",
-    challenges: "Data visualization, user authentication, mobile responsiveness",
-    achievements: "Adopted by 3 local organizations, tracked 1000+ volunteer hours, improved reporting efficiency by 60%",
-    technologies: ["Node.js", "Express", "MongoDB", "Chart.js"],
+    id: 'heatscape',
+    title: 'HeatScape',
+    subtitle: 'Cooling helmet for workers',
+    backstory: 'Peltier prototypes failed — 2-hour battery life and neck strain. Workers asked the obvious: who will charge this on site? Solar-Peltier was heavier and mocked.',
+    role: 'Switched to bamboo liner + fast-wick layer for evaporative cooling; jharokha-inspired vents placed by modeled convection; drip guards; quick-swap liners.',
+    outcomes: '4-week, 3-site pilot cut heatstroke reports ~40% (20→12). Secured BRPLK pilot: $10k for 3,000 units; pitched 12 firms.',
     images: [
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop"
-    ],
-    links: {
-      github: "https://github.com/yourusername/project",
-    }
+      'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1200&h=675&fit=crop',
+      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&h=675&fit=crop'
+    ]
   },
   {
-    id: 3,
-    title: "Sustainable Campus Initiative",
-    description: "Created an IoT system to monitor energy usage across school buildings and provide actionable insights for reducing carbon footprint.",
-    role: "Team Lead & Hardware Engineer",
-    timeline: "September 2023 - December 2023",
-    challenges: "Sensor integration, data transmission, creating meaningful visualizations",
-    achievements: "Reduced school energy consumption by 15%, won regional science fair, presented to school board",
-    technologies: ["Arduino", "Raspberry Pi", "Python", "React Dashboard"],
+    id: 'marriott',
+    title: 'Marriott International',
+    subtitle: 'Energy & Operations Intern (Jaipur)',
+    backstory: 'New property, high electricity costs; reduce load without hurting guest experience.',
+    role: 'Zoned load map (AHUs/FCUs, lighting, BOH, kitchens, lifts); motion/door sensors and lux meters; CCTV footfall; occupancy-gated lighting/HVAC with hysteresis and deadbands; widened setpoints (≈23–25°C); pre-cool windows; noncritical load-shed with overrides.',
+    outcomes: '~13% electricity reduction; smoother peaks; documented on resume and application.',
     images: [
-      "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=450&fit=crop",
-      "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&h=450&fit=crop",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=450&fit=crop",
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=450&fit=crop"
-    ],
-    links: {
-      github: "https://github.com/yourusername/project"
-    }
+      'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=675&fit=crop'
+    ]
+  },
+  {
+    id: 'fleeca',
+    title: 'FLEECA Automotive',
+    subtitle: 'R&D Intern (TPMS)',
+    backstory: 'Extend tire-sensor life; reduce field battery swaps.',
+    role: 'Wheel-hub test rig; speed/load sweeps; tuned mechanical preload and rectifier; profiled output ripple; debugged MCU sleep/wake; wrote bench scripts.',
+    outcomes: '~40% battery-health improvement in extended testing; fewer maintenance trips.',
+    images: [
+      'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200&h=675&fit=crop'
+    ]
+  },
+  {
+    id: 'chipsor',
+    title: 'ChipSor',
+    subtitle: 'Embedded & Product Intern (AQI wearable)',
+    backstory: 'Hyperlocal air-quality with actionable prompts.',
+    role: 'Calibrated sensors; filtered humidity drift; firmware alerts; minimal mobile UI; server/API to the app; tuned thresholds via hallway/road tests to curb kitchen/traffic false positives.',
+    outcomes: 'Stable readings across humidity swings; 30-day recalibration cadence.',
+    images: [
+      'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=675&fit=crop'
+    ]
+  },
+  {
+    id: 'annapurna',
+    title: 'Annapurna',
+    subtitle: 'Hotel surplus to meals',
+    backstory: 'Kitchen policy meant untouched banquet trays were binned nightly.',
+    role: 'Connected Marriott GM + four nearby hotels with Akshaya Patra; wrote a QA SOP (probe temps, seals, time labels, 3-hour cutoff), WhatsApp dispatch, temp-controlled van; borderline trays → compost/feed.',
+    outcomes: 'Daily pickups stabilized; 20k+ meals delivered since that summer; operations documented across partner hotels.',
+    images: [
+      'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&h=675&fit=crop',
+      'https://images.unsplash.com/photo-1593113598332-cd288d649433?w=1200&h=675&fit=crop'
+    ]
+  },
+  {
+    id: 'ideate',
+    title: 'IDEATE STEM Club',
+    subtitle: 'President',
+    backstory: 'Built junior–senior mentorship, weekly Kanban, and safety briefings; secured lab access and in-kind parts.',
+    role: 'Mentored teams (e.g., HEPA-UVC "CleanBox" mini-hood, PM2.5 campus mapper, smart irrigation mini-plot) to demo-day with handoff docs.',
+    outcomes: 'Established sustainable club structure with knowledge transfer across cohorts.',
+    images: [
+      'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&h=675&fit=crop'
+    ]
   }
 ]
 
 export default function Projects() {
   return (
-    <div className="min-h-screen py-20">
-      {/* Hero Section */}
-      <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mb-20">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold font-serif mb-6">
-            My <span className="gradient-text">Projects</span>
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A collection of work that showcases my passion for solving real-world problems
-            through technology and innovation.
+    <div className="min-h-screen">
+      {/* Hero */}
+      <section className="section-spacing border-b border-border">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <h1 className="text-display font-serif mb-8">Projects</h1>
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
+            A collection of work exploring the intersection of technical capability and real-world adoption.
           </p>
-        </motion.div>
-
-        {/* Projects Timeline */}
-        <div className="space-y-24">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              {...fadeInUp}
-              transition={{ delay: index * 0.1 }}
-            >
-              <Card className="overflow-hidden border-2 hover:border-primary/50 transition-colors">
-                <CardHeader className="space-y-4">
-                  <div className="flex flex-wrap items-start justify-between gap-4">
-                    <div className="flex-1">
-                      <CardTitle className="text-3xl mb-2">{project.title}</CardTitle>
-                      <CardDescription className="text-base flex items-center gap-2">
-                        <Calendar className="w-4 h-4" />
-                        {project.timeline}
-                      </CardDescription>
-                    </div>
-                    <div className="flex gap-2">
-                      {project.links.github && (
-                        <Button variant="outline" size="sm" asChild>
-                          <a href={project.links.github} target="_blank" rel="noopener noreferrer">
-                            <Github className="w-4 h-4 mr-2" />
-                            Code
-                          </a>
-                        </Button>
-                      )}
-                      {project.links.demo && (
-                        <Button size="sm" asChild>
-                          <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            Demo
-                          </a>
-                        </Button>
-                      )}
-                    </div>
-                  </div>
-                </CardHeader>
-
-                <CardContent className="space-y-6">
-                  {/* Image Gallery */}
-                  <ImageGallery
-                    images={project.images}
-                    alt={project.title}
-                  />
-
-                  {/* Project Details */}
-                  <div className="space-y-4">
-                    <div>
-                      <h3 className="text-lg font-semibold mb-2">Overview</h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {project.description}
-                      </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <h3 className="text-lg font-semibold mb-2">My Role</h3>
-                        <p className="text-muted-foreground">{project.role}</p>
-                      </div>
-
-                      <div>
-                        <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
-                          <Tag className="w-4 h-4" />
-                          Technologies
-                        </h3>
-                        <div className="flex flex-wrap gap-2">
-                          {project.technologies.map((tech) => (
-                            <Badge key={tech} variant="secondary">
-                              {tech}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div>
-                      <h3 className="text-lg font-semibold mb-2">Challenges</h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {project.challenges}
-                      </p>
-                    </div>
-
-                    <div className="bg-primary/5 border-l-4 border-primary p-4 rounded-r-lg">
-                      <h3 className="text-lg font-semibold mb-2">Impact & Achievements</h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {project.achievements}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
         </div>
-
-        {/* Call to Action */}
-        <motion.div
-          {...fadeInUp}
-          className="text-center mt-20"
-        >
-          <h2 className="text-3xl font-bold mb-4">Want to see more?</h2>
-          <p className="text-muted-foreground mb-6">
-            Check out my GitHub for additional projects and contributions.
-          </p>
-          <Button size="lg" asChild>
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-              <Github className="w-5 h-5 mr-2" />
-              Visit My GitHub
-            </a>
-          </Button>
-        </motion.div>
       </section>
+
+      {/* Projects */}
+      <div className="max-w-4xl mx-auto px-6 lg:px-8">
+        {projects.map((project, index) => (
+          <section key={project.id} className={index === 0 ? 'py-24' : 'py-16 border-t border-border'}>
+            {/* Title */}
+            <div className="mb-12">
+              <h2 className="text-title font-serif mb-2">{project.title}</h2>
+              <p className="text-lg text-muted-foreground">{project.subtitle}</p>
+            </div>
+
+            {/* Gallery */}
+            <div className="mb-12">
+              <ImageGallery images={project.images} alt={project.title} />
+            </div>
+
+            {/* Details */}
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-sm font-medium mb-3">Backstory</h3>
+                <p className="text-muted-foreground leading-relaxed">{project.backstory}</p>
+              </div>
+
+              <div>
+                <h3 className="text-sm font-medium mb-3">What I Did</h3>
+                <p className="text-muted-foreground leading-relaxed">{project.role}</p>
+              </div>
+
+              <div>
+                <h3 className="text-sm font-medium mb-3">Outcomes</h3>
+                <p className="text-muted-foreground leading-relaxed">{project.outcomes}</p>
+              </div>
+            </div>
+          </section>
+        ))}
+      </div>
     </div>
   )
 }
