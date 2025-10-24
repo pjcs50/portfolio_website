@@ -14,7 +14,7 @@ export default function Home() {
                 Prakhar Jain
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl">
-                I build products that survive real users: workers on sites, hotel ops teams, students studying at 2 a.m. I love physics, data/information science, and how people think — psychology, neuroscience, behavioral economics.
+                I build products that survive real users [workers on sites, hotel ops teams, students studying at 2 a.m.]. I love physics, data/information science, and how people think (psychology, neuroscience, behavioral economics).
               </p>
             </div>
 
@@ -64,15 +64,15 @@ export default function Home() {
 
           <div className="space-y-16">
             {/* TopperTrack */}
-            <div className="space-y-4">
+            <div className="space-y-4 pl-6 accent-border-l">
               <h3 className="text-2xl font-serif">TopperTrack</h3>
-              <p className="text-muted-foreground">AI tutor for SAT/JEE</p>
+              <p className="text-muted-foreground">AI tutor for SAT/JEE [my most used product honestly]</p>
               <p className="leading-relaxed">
-                A study buddy that plans your day, generates notes and flashcards from textbooks, and tracks progress. Led a 4-student team to build the plan engine, focus loop, and cohort dashboards. Ran a pilot with Allen (Jaipur) reaching 1,700+ students.
+                A study buddy that plans your day, generates notes and flashcards from textbooks, and tracks progress. Led a 4-student team to build the plan engine, focus loop, and cohort dashboards. Ran a pilot with Allen (one of India's biggest coaching institutes) in Jaipur - reached 1,700+ students.
               </p>
               <Link
                 to="/projects"
-                className="inline-flex items-center gap-2 text-sm font-medium group"
+                className="inline-flex items-center gap-2 text-sm font-medium group accent-text-hover"
               >
                 Read more
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -80,15 +80,15 @@ export default function Home() {
             </div>
 
             {/* HeatScape */}
-            <div className="space-y-4">
+            <div className="space-y-4 pl-6 accent-border-l">
               <h3 className="text-2xl font-serif">HeatScape</h3>
-              <p className="text-muted-foreground">Cooling helmet for workers</p>
+              <p className="text-muted-foreground">Cooling helmet for construction workers</p>
               <p className="leading-relaxed">
-                Passive-cooling helmet with sub-₹500 BOM. 4-week, 3-site pilot cut heatstroke reports by ~40%. Secured BRPLK pilot for 3,000 units valued at $10k.
+                Passive-cooling helmet with sub-₹500 BOM [bill of materials]. 4-week, 3-site pilot cut heatstroke reports by around 40%. Secured BRPLK pilot for 3,000 units valued at $10k.
               </p>
               <Link
                 to="/projects"
-                className="inline-flex items-center gap-2 text-sm font-medium group"
+                className="inline-flex items-center gap-2 text-sm font-medium group accent-text-hover"
               >
                 Read more
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -96,15 +96,15 @@ export default function Home() {
             </div>
 
             {/* Annapurna */}
-            <div className="space-y-4">
+            <div className="space-y-4 pl-6 accent-border-l">
               <h3 className="text-2xl font-serif">Annapurna</h3>
-              <p className="text-muted-foreground">Hotel surplus to meals</p>
+              <p className="text-muted-foreground">Hotel surplus food to meals for people who need it</p>
               <p className="leading-relaxed">
-                Connected Marriott GM and four nearby hotels with Akshaya Patra to rescue untouched banquet trays. 20k+ meals delivered since launch.
+                Connected Marriott GM and four nearby hotels with Akshaya Patra to rescue untouched banquet trays [the stuff that gets thrown away at the end of events]. 20k+ meals delivered since launch.
               </p>
               <Link
                 to="/projects"
-                className="inline-flex items-center gap-2 text-sm font-medium group"
+                className="inline-flex items-center gap-2 text-sm font-medium group accent-text-hover"
               >
                 Read more
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -119,20 +119,20 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
             <div>
-              <h3 className="text-sm font-medium mb-4">Experience</h3>
+              <h3 className="text-sm font-medium mb-4 accent-text">Experience</h3>
               <ul className="space-y-3 text-muted-foreground">
-                <li>Marriott International — Energy & Operations Intern</li>
-                <li>FLEECA Automotive — R&D Intern (TPMS)</li>
-                <li>ChipSor — Embedded & Product Intern</li>
+                <li>Marriott International - Energy & Operations Intern</li>
+                <li>FLEECA Automotive - R&D Intern (tire pressure sensors)</li>
+                <li>ChipSor - Embedded & Product Intern</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-sm font-medium mb-4">Recognition</h3>
+              <h3 className="text-sm font-medium mb-4 accent-text">Recognition</h3>
               <ul className="space-y-3 text-muted-foreground">
-                <li>SASMO #1 India, #2 Global</li>
+                <li>SASMO #1 India, #2 Global [out of 30k+ students]</li>
                 <li>NASA Beamline Top-25/500</li>
-                <li>Squash: 3× ISSO Golds, SGFI Top-5</li>
+                <li>Squash: 3x ISSO Golds, SGFI Top-5</li>
               </ul>
             </div>
           </div>

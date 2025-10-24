@@ -1,15 +1,15 @@
 const skillCategories = [
   {
     title: 'Technical',
-    skills: ['Python', 'C/C++', 'Arduino', 'Flask', 'SQLite/Postgres', 'Git', 'Basic ML (classification/recs)', 'matplotlib', 'HTML/CSS', 'Sensor integration', 'BOM management', 'Cohort analysis', 'A/B testing']
+    skills: ['Python [most comfortable]', 'C/C++', 'Arduino', 'Flask', 'SQLite/Postgres', 'Git', 'Basic ML [classification/recs]', 'matplotlib', 'HTML/CSS', 'Sensor integration', 'BOM management', 'Cohort analysis', 'A/B testing']
   },
   {
     title: 'Product & Operations',
-    skills: ['Product thinking', 'User interviewing', 'Rapid prototyping', 'Documentation', 'Stakeholder buy-in', 'Ops design']
+    skills: ['Product thinking', 'User interviewing [talked to 100+ users]', 'Rapid prototyping', 'Documentation [learned the hard way]', 'Stakeholder buy-in', 'Ops design']
   },
   {
     title: 'Leadership',
-    skills: ['Team leadership', 'Public speaking', 'Project management', 'Mentorship']
+    skills: ['Team leadership [IDEATE Club]', 'Public speaking', 'Project management', 'Mentorship [juniors in club]']
   }
 ]
 
@@ -24,12 +24,12 @@ export default function Skills() {
           <div className="space-y-16">
             {skillCategories.map((category) => (
               <div key={category.title}>
-                <h2 className="text-heading font-serif mb-8">{category.title}</h2>
+                <h2 className="text-heading font-serif mb-8 accent-text">{category.title}</h2>
                 <div className="flex flex-wrap gap-3">
                   {category.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-4 py-2 bg-muted rounded text-sm"
+                      className="px-4 py-2 accent-bg rounded text-sm border accent-border"
                     >
                       {skill}
                     </span>

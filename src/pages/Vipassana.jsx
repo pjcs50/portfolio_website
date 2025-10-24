@@ -6,7 +6,7 @@ export default function Vipassana() {
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <h1 className="text-display font-serif mb-8">Vipassana</h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Ten days. No phone, no books, no talking. Just sitting with my mind. This is the story of my 10-day Vipassana meditation retreat, and how it changed the way I think about everything.
+            Ten days. No phone, no books, no talking [noble silence the whole time]. Just sitting with my mind. This is the story of my 10-day Vipassana meditation retreat, and how it changed the way I think about everything.
           </p>
         </div>
       </section>
@@ -14,16 +14,16 @@ export default function Vipassana() {
       {/* Why I Went */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
-          <h2 className="text-heading font-serif mb-8">Why I Went</h2>
+          <h2 className="text-heading font-serif mb-8 accent-text accent-text">Why I Went</h2>
           <div className="space-y-6 text-lg leading-relaxed">
             <p>
               My dad had done Vipassana years ago. He never pushed it on me, but I'd notice things. The way he'd pause before responding when stressed. How he could sit through long dinners without checking his phone. Small things, but they stuck with me.
             </p>
             <p>
-              Grade 11 was brutal. TopperTrack was scaling, HeatScape was in pilot testing, school workload was insane, and I was captain of the squash team. I was productive, sure. But also completely burnt out. Every task felt urgent. I couldn't remember the last time I'd just... sat still.
+              Grade 11 was brutal. TopperTrack was scaling, HeatScape was in pilot testing, school workload was insane, and I was captain of the squash team. I was productive, sure. But also completely burnt out [like genuinely exhausted all the time]. Every task felt urgent. I couldn't remember the last time I'd just... sat still.
             </p>
             <p>
-              When my dad mentioned there was a 10-day course for students during summer break, I almost laughed. Ten days without my phone? Seemed impossible. But something in me knew I needed it. I signed up before I could change my mind.
+              When my dad mentioned there was a 10-day course for students during summer break, I almost laughed. Ten days without my phone? Seemed impossible [I check it like every 5 minutes]. But something in me knew I needed it. I signed up before I could change my mind.
             </p>
           </div>
         </div>
@@ -32,11 +32,11 @@ export default function Vipassana() {
       {/* The Journey: Day by Day */}
       <section className="py-24">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
-          <h2 className="text-heading font-serif mb-16">The Ten Days</h2>
+          <h2 className="text-heading font-serif mb-16 accent-text">The Ten Days</h2>
 
           <div className="space-y-16">
             {/* Day 1 */}
-            <div className="border-l-2 border-border pl-8">
+            <div className="accent-border-l pl-8">
               <h3 className="text-2xl font-serif mb-4">Day 1: Arrival</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
@@ -46,7 +46,7 @@ export default function Vipassana() {
                   Met my roommate briefly before noble silence began at 8 PM. He seemed nice. That was the last conversation I'd have for 10 days.
                 </p>
                 <p>
-                  First meditation session at 9 PM. "Just observe your breath," they said. Sounds simple. It wasn't. My mind was everywhere. Project deadlines, squash practice schedule, things I should have said to people, random song lyrics. Managed maybe 30 seconds of actual focus in an hour.
+                  First meditation session at 9 PM. "Just observe your breath," they said. Sounds simple. It wasn't [so incredibly hard]. My mind was everywhere. Project deadlines, squash practice schedule, things I should have said to people, random song lyrics. Managed maybe 30 seconds of actual focus in an hour.
                 </p>
                 <p>
                   Lying in bed that night: What have I gotten myself into?
@@ -55,7 +55,7 @@ export default function Vipassana() {
             </div>
 
             {/* Day 2 */}
-            <div className="border-l-2 border-border pl-8">
+            <div className="accent-border-l pl-8">
               <h3 className="text-2xl font-serif mb-4">Day 2: The Schedule Hits</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
@@ -74,7 +74,7 @@ export default function Vipassana() {
             </div>
 
             {/* Day 3 */}
-            <div className="border-l-2 border-border pl-8">
+            <div className="accent-border-l pl-8">
               <h3 className="text-2xl font-serif mb-4">Day 3: Rebellion Phase</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
@@ -90,7 +90,7 @@ export default function Vipassana() {
             </div>
 
             {/* Day 4 */}
-            <div className="border-l-2 border-border pl-8">
+            <div className="accent-border-l pl-8">
               <h3 className="text-2xl font-serif mb-4">Day 4: The Technique Changes</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
@@ -109,7 +109,7 @@ export default function Vipassana() {
             </div>
 
             {/* Day 5 */}
-            <div className="border-l-2 border-border pl-8">
+            <div className="accent-border-l pl-8">
               <h3 className="text-2xl font-serif mb-4">Day 5: The Breakdown</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
@@ -125,7 +125,7 @@ export default function Vipassana() {
             </div>
 
             {/* Day 6 */}
-            <div className="border-l-2 border-border pl-8">
+            <div className="accent-border-l pl-8">
               <h3 className="text-2xl font-serif mb-4">Day 6: Something Shifts</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
@@ -144,7 +144,7 @@ export default function Vipassana() {
             </div>
 
             {/* Day 7 */}
-            <div className="border-l-2 border-border pl-8">
+            <div className="accent-border-l pl-8">
               <h3 className="text-2xl font-serif mb-4">Day 7: Acceptance</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
@@ -163,7 +163,7 @@ export default function Vipassana() {
             </div>
 
             {/* Day 8 */}
-            <div className="border-l-2 border-border pl-8">
+            <div className="accent-border-l pl-8">
               <h3 className="text-2xl font-serif mb-4">Day 8: Clarity</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
@@ -182,7 +182,7 @@ export default function Vipassana() {
             </div>
 
             {/* Day 9 */}
-            <div className="border-l-2 border-border pl-8">
+            <div className="accent-border-l pl-8">
               <h3 className="text-2xl font-serif mb-4">Day 9: Integration</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
@@ -198,7 +198,7 @@ export default function Vipassana() {
             </div>
 
             {/* Day 10 */}
-            <div className="border-l-2 border-border pl-8">
+            <div className="accent-border-l pl-8">
               <h3 className="text-2xl font-serif mb-4">Day 10: Noble Silence Ends</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
@@ -225,7 +225,7 @@ export default function Vipassana() {
       {/* After: Ongoing Practice */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
-          <h2 className="text-heading font-serif mb-8">Since Then</h2>
+          <h2 className="text-heading font-serif mb-8 accent-text">Since Then</h2>
           <div className="space-y-6 text-lg leading-relaxed">
             <p>
               That was eight months ago. I still meditate daily. Not two hours - usually 30-45 minutes. Sometimes on the school bus during my 60-minute commute (turns out noisy buses are great practice for equanimity). Weekend mornings, I go to the local Vipassana group sit with my dad.
@@ -255,7 +255,7 @@ export default function Vipassana() {
       {/* What I Learned */}
       <section className="py-24">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
-          <h2 className="text-heading font-serif mb-8">What It Changed</h2>
+          <h2 className="text-heading font-serif mb-8 accent-text">What It Changed</h2>
           <div className="space-y-8">
             <div>
               <h3 className="text-xl font-semibold mb-3">Work differently, not less</h3>

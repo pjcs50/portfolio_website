@@ -1,15 +1,15 @@
 const awards = [
-  'SASMO #1 India, #2 Global',
-  'HKIMO Gold',
-  'IAAC Gold',
-  'IYMC Gold',
-  'NASA Beamline Top-25/500',
-  'Academic Excellence ×3',
-  'Outstanding JPITE ×2',
-  'Squash: 3× ISSO Golds',
-  'Squash: SGFI Top-5',
-  'IGCSE Physics subject topper',
-  'John Locke finalist'
+  'SASMO #1 India, #2 Global [out of 30k+ students]',
+  'HKIMO Gold [Hong Kong International Math Olympiad]',
+  'IAAC Gold [International Astronomy & Astrophysics Competition]',
+  'IYMC Gold [International Youth Math Challenge]',
+  'NASA Beamline Top-25/500 [research challenge]',
+  'Academic Excellence x3 [school awards for overall performance]',
+  'Outstanding JPITE x2 [school tech & innovation awards]',
+  'Squash: 3x ISSO Golds [national level]',
+  'Squash: SGFI Top-5 [nationals, toughest tournament]',
+  'IGCSE Physics subject topper [school]',
+  'John Locke finalist [philosophy essay competition]'
 ]
 
 export default function Awards() {
@@ -24,7 +24,7 @@ export default function Awards() {
             {awards.map((award, index) => (
               <div
                 key={index}
-                className="py-4 border-b border-border last:border-b-0"
+                className="py-4 border-b accent-border last:border-b-0"
               >
                 <p className="text-lg">{award}</p>
               </div>

@@ -14,16 +14,16 @@ export default function Squash() {
       {/* How It Started */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
-          <h2 className="text-heading font-serif mb-8">How It Started</h2>
+          <h2 className="text-heading font-serif mb-8 accent-text">How It Started</h2>
           <div className="space-y-6 text-lg leading-relaxed">
             <p>
               Grade 5. My dad took me to the club courts one weekend. Handed me a racket that felt too big for my hands. Said, "Try it."
             </p>
             <p>
-              First week was terrible. I couldn't hit the ball straight. My serves hit the tin more than the front wall. I was getting destroyed by kids two years younger than me. But something about the speed of it - the way the ball ricocheted unpredictably, how you had to think three shots ahead while moving - hooked me.
+              First week was terrible. I couldn't hit the ball straight. My serves hit the tin more than the front wall [that's basically the equivalent of hitting the net in tennis]. I was getting destroyed by kids two years younger than me. But something about the speed of it [the way the ball ricocheted unpredictably, how you had to think three shots ahead while moving] hooked me.
             </p>
             <p>
-              By Grade 6, I was training six days a week. By Grade 7, I made the school team. By Grade 8, I was competing at state level. By Grade 10, I was ranked Top-20 in India for my age group and team captain.
+              By Grade 6, I was training six days a week. By Grade 7, I made the school team. By Grade 8, I was competing at state level. By Grade 10, I was ranked Top-20 in India for my age group and team captain [which honestly still feels surreal].
             </p>
             <p>
               Seven years later, squash isn't just a sport. It's where I learned what competition actually means.
@@ -39,7 +39,7 @@ export default function Squash() {
 
           <div className="space-y-16">
             {/* First Big Win */}
-            <div className="border-l-2 border-border pl-8">
+            <div className="accent-border-l pl-8">
               <h3 className="text-2xl font-serif mb-4">First National Tournament (Grade 8)</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
@@ -61,7 +61,7 @@ export default function Squash() {
             </div>
 
             {/* Becoming Captain */}
-            <div className="border-l-2 border-border pl-8">
+            <div className="accent-border-l pl-8">
               <h3 className="text-2xl font-serif mb-4">Team Captain (Grade 10-12)</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
@@ -83,7 +83,7 @@ export default function Squash() {
             </div>
 
             {/* SGFI Tournament */}
-            <div className="border-l-2 border-border pl-8">
+            <div className="accent-border-l pl-8">
               <h3 className="text-2xl font-serif mb-4">SGFI Nationals (Grade 11)</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
@@ -108,7 +108,7 @@ export default function Squash() {
             </div>
 
             {/* Third ISSO Gold */}
-            <div className="border-l-2 border-border pl-8">
+            <div className="accent-border-l pl-8">
               <h3 className="text-2xl font-serif mb-4">Third ISSO Gold (Grade 12)</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
@@ -138,7 +138,7 @@ export default function Squash() {
       {/* Training & Dedication */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
-          <h2 className="text-heading font-serif mb-8">The Training</h2>
+          <h2 className="text-heading font-serif mb-8 accent-text">The Training</h2>
           <div className="space-y-6 text-lg leading-relaxed">
             <p>
               6 AM: Court practice, technical drills. 6 PM: Match practice or conditioning. Six days a week. Every week. For seven years.
@@ -165,7 +165,7 @@ export default function Squash() {
       {/* Mental Game */}
       <section className="py-24">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
-          <h2 className="text-heading font-serif mb-8">The Mental Game</h2>
+          <h2 className="text-heading font-serif mb-8 accent-text">The Mental Game</h2>
           <div className="space-y-6 text-lg leading-relaxed">
             <p>
               At national level, everyone's technically good. The difference is mental. Who panics at match point? Who stays composed when the calls go against them? Who can shake off a bad game and reset for the next one?
@@ -192,7 +192,7 @@ export default function Squash() {
       {/* What Squash Taught Me */}
       <section className="py-24 border-t border-border">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
-          <h2 className="text-heading font-serif mb-8">What Squash Taught Me</h2>
+          <h2 className="text-heading font-serif mb-8 accent-text">What Squash Taught Me</h2>
           <div className="space-y-8">
             <div>
               <h3 className="text-xl font-semibold mb-3">Competition reveals character</h3>
@@ -235,7 +235,7 @@ export default function Squash() {
       {/* Current Status */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
-          <h2 className="text-heading font-serif mb-8">Now</h2>
+          <h2 className="text-heading font-serif mb-8 accent-text">Now</h2>
           <div className="space-y-6 text-lg leading-relaxed">
             <p>
               Still training six days a week. Still ranked Top-20 nationally in my age group. Still team captain for the school team.

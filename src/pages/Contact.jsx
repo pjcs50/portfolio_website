@@ -20,10 +20,10 @@ export default function Contact() {
             {/* Contact Info */}
             <div className="space-y-6">
               <div className="flex items-center gap-3 text-lg">
-                <Mail className="w-5 h-5 text-muted-foreground" />
+                <Mail className="w-5 h-5 accent-text" />
                 <a
                   href="mailto:prakhar.jain377@gmail.com"
-                  className="link-underline"
+                  className="link-underline accent-text-hover"
                 >
                   prakhar.jain377@gmail.com
                 </a>
@@ -36,8 +36,8 @@ export default function Contact() {
             </div>
 
             {/* Links */}
-            <div className="pt-8 border-t border-border">
-              <h2 className="text-sm font-medium mb-6">Links</h2>
+            <div className="pt-8 border-t accent-border">
+              <h2 className="text-sm font-medium mb-6 accent-text">Links</h2>
               <div className="space-y-4">
                 {links.map((link) => (
                   <div key={link.name}>
@@ -45,7 +45,7 @@ export default function Contact() {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-lg link-underline"
+                      className="text-lg link-underline accent-text-hover"
                     >
                       {link.name}
                     </a>
@@ -55,7 +55,8 @@ export default function Contact() {
             </div>
 
             {/* Resume */}
-            <div className="pt-8 border-t border-border">
+            <div className="pt-8 border-t accent-border">
+              <p className="text-muted-foreground mb-4">Want the full picture? [resume has everything in one place]</p>
               <a
                 href="/resume.pdf"
                 download
